@@ -7,7 +7,7 @@
   АВТОСЕРВИС
   </v-list-item-title>
   <v-list-item-subtitle>
-  BuNKER service
+  BuNKER
   </v-list-item-subtitle>
   </v-list-item-content>
   </v-list-item>
@@ -49,10 +49,27 @@
   <v-main>
   <router-view></router-view>
   </v-main>
+
+  <v-snackbar
+      v-model="error"
+      multi-line
+      :timeout="2000"
+      color="primary"
+      >
+      {{ error }}
+      <template v-slot:actions>
+      <v-btn
+      variant="text"
+      @click="closeError"
+      >
+      Close
+      </v-btn>
+      </template>
+  </v-snackbar>
+
   </v-app>
-  </template>
+</template>
       
-  
 <script>
 export default {
 data() {
