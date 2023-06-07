@@ -6,49 +6,56 @@ export default {
                 desc: "First Desc",
                 promo: true,
                 src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-01.jpg",
-                id: "1"
+                id: "1",
+                userId: "1"
               },
               {
                 title: "Оклейка авто плёнкой",
                 desc: "Second Desc",
                 promo: true,
                 src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-08.jpg",
-                id: "2"
+                id: "2",
+                userId: "2"
               },
               {
                 title: "Кузовной ремонт",
                 desc: "Thitd Desc",
                 promo: true,
                 src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-11.jpg",
-                id: "3"
+                id: "3",
+                userId: "3"
               },
               {
                 title: "Реставрация кожаного салона",
                 desc: "Fourth Desc",
                 promo: true,
                 src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-05.jpg",
-                id: "4"
+                id: "4",
+                userId: "4"
               },
               {
                 title: "Покраска",
                 desc: "Fifth Desc",
                 promo: true,
                 src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-09.jpg",
-                id: "5"
+                id: "5",
+                userId: "5"
               },
               {
                 title: "Удаление прожёгов",
                 desc: "Sixth Desc",
                 promo: true,
                 src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-13.jpg",
-                id: "6"
+                id: "6",
+                userId: "6"
               },
               {
                 title: "Полировка кузова авто",
                 desc: "Seventh Desc",
                 promo: true,
                 src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-14.jpg",
-                id: "7"
+                id: "7",
+                userId: "7"
               }
         ]
     },
