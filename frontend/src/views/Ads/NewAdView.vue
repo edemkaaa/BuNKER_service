@@ -20,7 +20,7 @@
                 </v-row>
                 <v-row>
                     <v-col cols="8">
-                        <img src="https://psv4.userapi.com/c235031/u417974873/docs/d3/8edd44f3af8c/BuNKER.png?extra=bQrzCELJOT1J9-uzQYZGWagkJAj9FolboKa7lFxDENDqX8x_OYhhg2BQqAb-gFFRgKQicA-XxsHtJL5TmJy_rs6qfc11nQ21W1O0NOY6ru8zAitnyHeeUIZIjP6IbSGq8VVWV2T9nWYAYPhpvzhKdc9qY_M" height="150" class="mt-3" />
+                        <img src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg" height="150" class="mt-3" />
                     </v-col>
                 </v-row>
                 <v-row>
@@ -49,16 +49,16 @@ export default {
         };
     },
     methods: {
-        createAd(){
-if (this.$refs.form.validate()){
-		const ad = {
-		title: this.title,
-		desc: this.description,
-		promo: this.promo,
-		src: "https://cdn.vuetifyjs.com/images/cards/cooking.png"
-		}
-		console.log(ad)
-	}
+        createAd() {
+            if (this.$refs.form.validate()) {
+                const ad = {
+                    title: this.title,
+                    desc: this.description,
+                    promo: this.promo,
+                    src: "https://cdn.vuetifyjs.com/images/cards/cooking.png"
+                };
+                this.$store.dispatch("createAd", ad)
+            }
         },
     },
 };
