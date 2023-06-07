@@ -6,7 +6,6 @@ class User {
     }
 }
 
-
 export default {
     state: {
         user: null
@@ -33,18 +32,18 @@ export default {
             });
 
 
-            if (isRequestOk) {
-                await promise.then(() => {
-                    commit('setUser', new User(1, email, password))
-                    commit('setLoading', false)
-                })
-            } else {
-                await promise.then(() => {
-                    commit('setLoading', false)
-                    commit('setError', 'Ошибка регистрации')
-                    throw 'Упс... Ошибка регистрации'
-                })
-            }
+if (isRequestOk) {
+    await promise.then(() => {
+        commit('setUser', new User(1, email, password))
+        commit('setLoading', false)
+})
+} else {
+    await promise.then(() => {
+        commit('setLoading', false)
+        commit('setError', 'Ошибка регистрации')
+    throw 'Упс... Ошибка регистрации'
+})
+}
         },
         async loginUser({
             commit
@@ -65,7 +64,7 @@ export default {
                 await promise.then(() => {
                     commit('setUser', new User(1, email, password))
                     commit('setLoading', false)
-                })
+            })
             } else {
                 await promise.then(() => {
                     commit('setLoading', false)
@@ -73,14 +72,17 @@ export default {
                     throw 'Упс... Ошибка логина или пароля'
                 })
             }
+        },
+        logoutUser({commit}) {
+        commit('setUser', null)
         }
     },
     getters: {
         user(state) {
-            return state.user
+return state.user
         },
         isUserLoggedIn (state) {
-            return state.user !== null
-        }        
+return state.user !== null
+        }
     }
 }
