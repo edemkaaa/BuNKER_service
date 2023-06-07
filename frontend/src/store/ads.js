@@ -1,34 +1,55 @@
 export default {
     state: {
         ads:[
-                {
-                    title:"First",
-                    desc:"First Desc",
-                    promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
-                    id:"1"
-                },
-                {
-                    title:"Second",
-                    desc:"Second Desc",
-                    promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-                    id:"2"
-                },
-                {
-                    title:"Third",
-                    desc:"Thitd Desc",
-                    promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-                    id:"3"
-                },
-                {
-                    title:"Fouth",
-                    desc:"Fouth Desc",
-                    promo: true,
-                    src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-                    id:"4"
-                }
+            {
+                title: "Ремонт вмятин",
+                desc: "First Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-01.jpg",
+                id: "1"
+              },
+              {
+                title: "Оклейка авто плёнкой",
+                desc: "Second Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-08.jpg",
+                id: "2"
+              },
+              {
+                title: "Кузовной ремонт",
+                desc: "Thitd Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-11.jpg",
+                id: "3"
+              },
+              {
+                title: "Реставрация кожаного салона",
+                desc: "Fourth Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-05.jpg",
+                id: "4"
+              },
+              {
+                title: "Покраска",
+                desc: "Fifth Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-09.jpg",
+                id: "5"
+              },
+              {
+                title: "Удаление прожёгов",
+                desc: "Sixth Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-13.jpg",
+                id: "6"
+              },
+              {
+                title: "Полировка кузова авто",
+                desc: "Seventh Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-14.jpg",
+                id: "7"
+              }
         ]
     },
     mutations: {},
@@ -44,6 +65,11 @@ export default {
             },
             myAds(state) {
                 return state.ads
+        },
+        adById(state) {
+        return id => {
+        return state.ads.find(ad => ad.id == id)
         }
     }
+}
 }
