@@ -24,8 +24,8 @@
                 <v-col cols="12">
                     <v-card-actions>
                         <v-spacer></v-spacer>
-                        <v-btn>Cancel</v-btn>
-                        <v-btn color="success">Save</v-btn>
+                        <modal-dialog></modal-dialog>
+                        <v-btn class="success">Buy</v-btn>
                     </v-card-actions>
                 </v-col>
             </v-row>
@@ -34,12 +34,20 @@
 </template>
     
 <script>
+import EditAdModal from '../EditAdModal'
 export default {
-    data() {
-        return {
-            modal: false
+    props: ['id'],
+    computed: {
+        ad() {
+            const id = this.id
+            return this.$store.getters.adById(id)
         }
+    },
+    components: {
+        'modal-dialog': EditAdModal
     }
-}
+} 
 </script>
+
+
     
