@@ -27,8 +27,8 @@
                 <v-col cols="12">
                     <v-card-actions>
                         <v-spacer></v-spacer>
-                        <v-btn>Cancel</v-btn>
-                        <v-btn color="success">Buy It</v-btn>
+                        <v-btn @click="onClose">Close</v-btn>
+                        <v-btn @click="onSave" color="success">Buy It!</v-btn>
                     </v-card-actions>
                 </v-col>
             </v-row>
@@ -44,6 +44,28 @@ export default {
             modal: false,
             name: '',
             phone: ''
+        }
+    },
+    methods: {
+        onClose() {
+            this.name = ""
+            this.phone = ""
+            this.modal = false
+        },
+        onSave() {
+            if (this.name !== '' && this.phone !== '') {
+                this.$store.dispatch('createOrder', {
+                    name: this.name,
+                    phone: this.phone,
+                    adId: this.ad.id,
+                    userId: this.ad.userId
+                })
+                    .finally(() => {
+                        this.name = ""
+                        this.phone = ""
+                        this.modal = false
+                    })
+            }
         }
     }
 }
