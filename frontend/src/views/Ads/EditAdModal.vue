@@ -20,23 +20,22 @@
                         <v-textarea name="desc" label="Description" type="text" v-model="editedDesc"
                             class="mb-3"></v-textarea>
                     </v-card-text>
-
                 </v-col>
             </v-row>
 
             <v-row justify="center">
                 <v-col cols="12">
                     <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <v-btn @click="onCancel">Cancel</v-btn>
-                        <v-btn color="success" @click="onSave">Save</v-btn>
+                    <v-spacer></v-spacer>
+                    <v-btn @click="onCancel">Cancel</v-btn>
+                    <v-btn color="success" @click="onSave">Save</v-btn>
                     </v-card-actions>
                 </v-col>
             </v-row>
         </v-card>
     </v-dialog>
 </template>
-    
+
 <script>
 export default {
     props: ['ad'],
@@ -62,8 +61,10 @@ export default {
                 })
                 this.modal = false
             }
+        },
+        isOwner() {
+            return this.ad.ownerId === this.$store.getters.user.id
         }
     }
 }
 </script>
-    

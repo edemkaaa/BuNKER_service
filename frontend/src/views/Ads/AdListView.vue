@@ -1,8 +1,8 @@
 <template>
     <v-container>
-        <h1 class="text--secondary mb-3 mt-3">My ads</h1>
-        <v-card v-for="ad in myAds" :key="ad.id" class="mx-auto" max-width="1000">
-            <v-row>
+        <h1 class="text--secondary mb-3 mt-3 ">My ads</h1>
+        <v-card v-for="ad in myAds" :key="ad.id" class="mx-auto mb-5" max-width="1000">
+            <v-row class="ma-2">
                 <v-img :src="ad.src" height="175px"></v-img>
                 <v-spacer></v-spacer>
             </v-row>
@@ -22,11 +22,10 @@
         </v-card>
     </v-container>
 </template>
-
 <script>
 export default {
     computed: {
-        ads() {
+        myAds() {
             return this.$store.getters.myAds
         }
     }

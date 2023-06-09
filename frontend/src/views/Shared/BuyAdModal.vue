@@ -15,9 +15,19 @@
             <v-row justify="center">
                 <v-col cols="12">
                     <v-card-text>
-                        <v-text-field name="name" label="Your name" type="text" v-model="name">
+                        <v-text-field
+                            name="name"
+                            label="Your name"
+                            type="text"
+                            v-model="name"
+                        >
                         </v-text-field>
-                        <v-text-field name="phone" label="Your phone" type="text" v-model="phone">
+                        <v-text-field
+                            name="phone"
+                            label="Your phone"
+                            type="text"
+                            v-model="phone"
+                        >
                         </v-text-field>
                     </v-card-text>
                 </v-col>
@@ -28,8 +38,7 @@
                     <v-card-actions>
                         <v-spacer></v-spacer>
                         <v-btn @click="onClose" :disabled="localLoading">Close</v-btn>
-                        <v-btn @click="onSave" color="success" :disabled="localLoading" :loading="localLoading">Buy
-                            It!</v-btn>
+                        <v-btn @click="onSave" color="success" :disabled="localLoading" :loading="localLoading">Buy It!</v-btn>
                     </v-card-actions>
                 </v-col>
             </v-row>
@@ -71,6 +80,6 @@ export default {
                     })
             }
         }
-    },
+    }
 }
 </script>

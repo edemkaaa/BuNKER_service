@@ -63,9 +63,6 @@ export default {
                         console.log(err.message)
                     })
             }
-        },
-        isOwner() {
-            return this.ad.ownerId === this.$store.getters.user.id
         }
     }
 } 
