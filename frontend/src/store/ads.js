@@ -1,38 +1,62 @@
 export default {
     state: {
-        ads: [
+        ads:[
             {
-                title: "First",
+                title: "Ремонт вмятин",
                 desc: "First Desc",
                 promo: true,
-                src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-01.jpg",
                 id: "1",
                 userId: "1"
-            },
-            {
-                title: "Second",
+              },
+              {
+                title: "Оклейка авто плёнкой",
                 desc: "Second Desc",
                 promo: true,
-                src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-08.jpg",
                 id: "2",
                 userId: "2"
-            },
-            {
-                title: "Third",
+              },
+              {
+                title: "Кузовной ремонт",
                 desc: "Thitd Desc",
                 promo: true,
-                src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-11.jpg",
                 id: "3",
                 userId: "3"
-            },
-            {
-                title: "Fouth",
-                desc: "Fouth Desc",
+              },
+              {
+                title: "Реставрация кожаного салона",
+                desc: "Fourth Desc",
                 promo: true,
-                src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-05.jpg",
                 id: "4",
                 userId: "4"
-            }
+              },
+              {
+                title: "Покраска",
+                desc: "Fifth Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-09.jpg",
+                id: "5",
+                userId: "5"
+              },
+              {
+                title: "Удаление прожёгов",
+                desc: "Sixth Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-13.jpg",
+                id: "6",
+                userId: "6"
+              },
+              {
+                title: "Полировка кузова авто",
+                desc: "Seventh Desc",
+                promo: true,
+                src: "https://автоцарапина.рф/images/grey/overcontent-slider/overcontent-14.jpg",
+                id: "7",
+                userId: "7"
+              }
         ]
     },
     mutations: {
@@ -90,6 +114,5 @@ export default {
                 throw 'Упс... Ошибка создания объявления'
             })
         }
-
     }
 }
